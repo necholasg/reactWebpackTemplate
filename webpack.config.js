@@ -125,8 +125,8 @@ if(TARGET === 'build' || TARGET === 'stats') {
         // Extract CSS during build
         {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract("style", "css", "sass"),
-          include: PATHS.app
+          loader: ExtractTextPlugin.extract("style", "css!sass"),
+          include: PATHS.style
         }
       ]
     },
